@@ -16,12 +16,18 @@
 
     <!-- Custom CSS -->
     <link href="css/freelancer.css" rel="stylesheet">
+    <link href="css/progressbar.css" rel="stylesheet">
+    <link href="css/animate.min.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
     <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 	<link rel="icon" type="image/png" href="img/favicon.png" />
+
+    <!-- Custom JS -->
+    <script src="js/wrapper.js"></script>
+
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -32,13 +38,13 @@
 
 </head>
 
-<body id="page-top" class="index">
-	<img  class="background" src="img/background/background.png" alt=""/>
+<body id="page-top" class="index" onload="resize()">
+	<img  class="background" src="" alt=""/>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" id="barre-navigation">
         <div class="container">
-            <a class="navbar-brand navbar-left" href="#page-top">Eddy Rahmani</a>
+            <a class="navbar-brand navbar-left " href="#page-top">Eddy Rahmani</a>
 
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
@@ -55,7 +61,7 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
 
-                    <li class="hidden">
+                    <li class="hidden page-scroll">
                         <a href="#page-top"></a>
                     </li>
                     <li class="page-scroll">
@@ -68,8 +74,8 @@
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                            role="button" aria-haspopup="true" aria-expanded="false">Activités<span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#activites">Epreuve E4 PPE</a></li>
-                            <li><a href="#activites">Stages</a></li>
+                            <li class="page-scroll"><a href="#ppe">Epreuve E4 PPE</a></li>
+                            <li class="page-scroll"><a href="#stages">Stages</a></li>
                         </ul>
                     </li>
                        <li class="dropdown">
@@ -77,8 +83,8 @@
                               role="button" aria-haspopup="true" aria-expanded="false">Veilles<span class="caret"></span></a>
 
                            <ul class="dropdown-menu">
-                            <li><a href="#veilletechnologique">Veille technologique</a></li>
-                            <li><a href="#">Veille juridique</a></li>
+                            <li class="page-scroll"><a  href="#veilletechnologique">Veille technologique</a></li>
+                            <li class="page-scroll"><a  href="#veillejuridique">Veille juridique</a></li>
                         </ul>
                     </li>
 
@@ -95,22 +101,27 @@
 	
 
     <!-- Header -->
-    <header>
+    <header id="titre">
         <div class="container" >
             <div class="row introduction" id="nom" >
-                <div class="col-lg-12 text-center">
+                <div class="col-lg-12 text-center wow bounceIn">
                         <h1>Eddy Rahmani</h1>
                         <hr class="star-light">
-                        <p class="skills">Développeur</p></div>
+                        <h2>Développeur</h2>
                 </div>
             </div>
         </div>
     </header>
 
     <!-- presentation Grid Section -->
-    <section id="presentation" class="solid">
-        <div class="bandeau"></div>
+    <section id="presentation" class="transparent">
         <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="souligne">Présentation</h2>
+                </div>
+                <div class="bandeau-medium col-xs-12"> </div>
+            </div>
             <div class="row">
                 <div class="col-lg-12 text-center">
 
@@ -129,97 +140,53 @@
 					</p>
                 </div>
             </div>
-            
+            <div class="bandeau-small"></div>
         </div>
-        <div class="bandeau"></div>
     </section>
-	
-	<div class="bandeau"></div>
 
     <!-- CV Section -->
-    <section id="cv" class="transparent">
+    <section id="cv" class=" transparent">
         <div class="container">
-            <div class="row" id="language">
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="souligne">Compétences Proffesionelle</h2>
-                    </div>
-                        <div class="bandeau col-xs-12"> </div>
+            <div class="col-lg-12 text-center">
+                <h2 class="souligne">Compétences Proffesionelle</h2>
+            </div>
+            <div class="bandeau-medium col-xs-12"> </div>
+                <div class="col-lg-6 x">
+                    <ul><h3 class="">Développement</h3>
+                        <li><p>Création et gestion de bases de Données MySQL</p></li>
+                        <li>Développement de site web HTML, CSS, PHP</li>
+                        <li>Framework Symphony2, Bootstrap</li>
+                        <li>Développement d’applications Android</li>
+                        <li>Méthodologie Merise, MVC, notions UML</li>
+                    </ul>
                 </div>
-                <div class="row">
-                    <div class="text-center" id="competence">
-                        <p>Création et gestion de bases de Données MySQL</p>
-                        <p></p>
-                        <p>Développement de site web HTML, CSS, PHP</p>
-                        <p></p>
-                        <p>Framework Symphony2, Bootstrap</p>
-                        <p>Développement d’applications Android</p>
-                        <p>Méthodologie Merise, MVC, notions UML</p>
+                <div class="col-lg-6 text-center">
+                    <!-- Skill Bars -->
+                    <div id="progressbar" class="progress skill-bar ">
+                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70(" aria-valuemin="0" aria-valuemax="70">
+                            <span class="skill">HTML5-CSS3-BOOTSTRAP 3<i class="val">70%</i></span>
+                        </div>
                     </div>
-                </div>
 
-                <div class="bandeau col-xs-12"> </div>
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="souligne">Language</h2>
+                    <div class="progress skill-bar">
+                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" >
+                            <span class="skill"><i class="val">90%</i></span>
+                        </div>
                     </div>
-                    <div class="bandeau col-xs-12"> </div>
-                    <div class="col-lg-12 col-lg-offset-0 competence">
-                        <div class="skills" onmouseover="skills()">
-                          <div class="skill-column">
-                            <div class="skill-label">JAVA SE</div>
-                            <div class="skill-icons">
-                              <span class="active"></span>
-                              <span class="active"></span>
-                              <span class="active"></span>
-                              <span></span>
-                              <span></span>
-                            </div>
-                          </div>
 
-                          <div class="skill-column">
-                            <div class="skill-label">PHP</div>
-                            <div class="skill-icons">
-                              <span class="active"></span>
-                              <span class="active"></span>
-                              <span class="active"></span>
-                              <span></span>
-                              <span></span>
-                            </div>
-                          </div>
-                          <div class="skill-column">
-                            <div class="skill-label">HTML/CSS</div>
-                            <div class="skill-icons">
-                              <span class="active"></span>
-                              <span class="active"></span>
-                              <span class="active"></span>
-                              <span></span>
-                              <span></span>
-                            </div>
-                          </div>
-                          <div class="skill-column">
-                            <div class="skill-label">SQL</div>
-                            <div class="skill-icons">
-                              <span class="active"></span>
-                              <span class="active"></span>
-                              <span></span>
-                              <span></span>
-                              <span></span>
-                            </div>
-                          </div>
-                          <div class="skill-column">
-                            <div class="skill-label">PYTHON</div>
-                            <div class="skill-icons">
-                                <span class="active"></span>
-                                <span class="active"></span>
-                                <span class="active"></span>
-                              <span></span>
-                              <span></span>
-                            </div>
-                          </div>
+                    <div class="progress skill-bar">
+                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill">JavaScript<i class="val">75%</i></span>
+                        </div>
+                    </div>
+
+                    <div class="progress skill-bar">
+                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
+                            <span class="skill">Photoshop<i class="val">55%</i></span>
                         </div>
                     </div>
                 </div>
+
                 <div class="bandeau"></div>
 
                 <div class="row">
@@ -227,6 +194,35 @@
                         <h2 class="souligne">Expériences</h2>
                     </div>
                     <div class="bandeau col-xs-12"></div>
+
+                    <div>
+                        <div class="col-xs-9">
+                            <p><strong>CONTRÔLE TECHNIQUE LM</strong></p>
+                        </div>
+                        <div class="col-sm-3 text-right">
+                            <p>Janvier 2016</p>
+                        </div>
+                        <div class="col-xs-12">
+                            <p>Stage création d’un site web pour une entreprise de contrôle automobile</p>
+                        </div>
+                    </div>
+
+                    <div class=" col-xs-12 bandeau-small"></div>
+
+
+                    <div>
+                        <div class="col-xs-9">
+                            <p><strong>CASSDALL CHAMPIER</strong></p>
+                        </div>
+                        <div class="col-sm-3 text-right">
+                            <p>Juin 2015</p>
+                        </div>
+                        <div class="col-xs-12">
+                            <p>Stage création d’un site web pour un restaurant</p>
+                        </div>
+                    </div>
+
+                    <div class=" col-xs-12 bandeau-small"></div>
 
                     <div>
                         <div class="col-xs-9">
@@ -244,7 +240,7 @@
                     <div>
 
                         <div class="col-xs-9">
-                            <p>FAILARD  INDUSTRIE</p>
+                            <p><strong>FAILARD  INDUSTRIE</strong></p>
                         </div>
                         <div class="col-xs-3 text-right">
                             <p>Juin 2012</p>
@@ -290,7 +286,7 @@
                     <div class="col-lg-12 text-center">
                         <h2 class="souligne">Formation</h2>
                     </div>
-                    <div class="bandeau col-xs-12"></div>
+                    <div class=" bandeau-medium col-xs-12"></div>
 
                     <div>
                         <div class="col-xs-9">
@@ -330,43 +326,60 @@
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="bandeau-medium"></div>
+            <div class="col-lg-8 col-lg-offset-2 text-center">
+                <a href="CV/CV EDDY RAHMANI.pdf" target="_blank" class="btn btn-lg btn-outline btn-telecharger">
+                    <i class="fa fa-download"></i> Telecharger CV
+                </a>
+            </div>
+        </div>
+        <div class="bandeau-small"></div>
+    </section>
 
+
+    <section id="ppe" class="transparent">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Projet personnel encadré</h2>
                 </div>
-                <div class="bandeau"></div>
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="CV/CV EDDY RAHMANI.pdf" target="_blank" class="btn btn-lg btn-outline btn-telecharger">
-                        <i class="fa fa-download"></i> Telecharger CV
-                    </a>
+                <div class="bandeau-medium"></div>
+                <div class="row">
+                    <h3> </h3>
                 </div>
             </div>
         </div>
     </section>
-    <div class="bandeau"></div>
-
-    <section id="activites" class="solid">
-        <div class="bandeau"></div>
+    <section id="stages" class="transparent">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Activités</h2>
-
+                    <h2 >Stages</h2>
                 </div>
             </div>
+            <div class="bandeau-medium"></div>
+            <div class="row">
+                <h3>Stage Cassdall Champier</h3>
+            </div>
 
+            <div class="bandeau-medium"></div>
+
+            <div class="row">
+                <h3>Stage Contrôle technique LM</h3>
+            </div>
         </div>
-        <div class="bandeau"></div>
     </section>
 
 	  <!-- veille technologique  Section -->
-    <section id="veilletechnologique" class="transparent">
-        <div class="bandeau"></div>
+    <section class=" transparent">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Veille Technologique</h2>
+                    <h2 id="veilletechnologique">Veille Technologique</h2>
                 </div>
             </div>
-            <div class="bandeau-small"></div>
+            <div class="bandeau-medium"></div>
             <div class="row">
                 <img class="img-responsive img-centered " src="img/symfony/icon_symfony2.png">
                 <h3>Symfony 2</h3>
@@ -406,7 +419,7 @@
 
                         <li>Une bonne organisation du code : Le Framework impose une
                             architecture organisée. Utiliser Symfony2 force à suivre cette
-                            architecture et donc à avoir un code ordonné et facilement lisible.</li>
+                            architecture et c à avoir un code ordonné et facilement lisible.</li>
                         <div class="bandeau-small"></div>
 
                         <li>L’utilisation d’une architecture MVC (modèle-vue-contrôleur) : la
@@ -466,27 +479,28 @@
                     <div class="bandeau-small"></div>
 
                     <p style="text-align:justify;">Cela permet de connaitre précisément les dates de sortie et les périodes de maintenance.</p>
-
                 </div><!-- .entry-content -->
             </div>
         </div>
-        <div class="bandeau"></div>
-
+        <div class="bandeau-medium"></div>
     </section>
 
-    <div class="bandeau"></div>
-	</div>
-	
-
+    <section id="veillejuridique" class="transparent">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Veille Juridique</h2>
+                </div>
+            </div>
+        </div>
+    </section>
     <!-- Contact Section -->
     <section class="success" id="contact">
-        <div class="bandeau col-xs-12"></div>
         <div class="container" id="formulaire">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                	<h2>Contact</h2>
+                    <h2 >Contact</h2>
                 </div>
-            </div>
             <div class="bandeau col-xs-12"></div>
 
             <div class="row">
@@ -526,7 +540,7 @@
                         <div id="success"></div>
                         <div class="row">
                             <div class="form-group col-xs-12">
-                                <button type="submit" class="btn btn-success btn-lg btn-envoyer">Envoyer</button>
+                                <button type="submit" class="btn btn-lg btn-outline btn-telecharger">Envoyer</button>
                             </div>
                         </div>
                     </form>
@@ -537,28 +551,27 @@
     </section>
 
     <!-- Footer -->
-    <footer class="text-center transparent">
+    <footer class="text-center text-white  bg-dark">
         <div class="footer-above">
             <div class="container">
                 <div class="row">
-                    <div class="footer-col col-md-4">
-                    </div>
-                    <div class="footer-col col-md-4">
-                    	<h3>RESEAUX SOCIAUX</h3>
-                    	<ul class="list-inline">
-                            <li>
+
+                    <div class="footer-col col-sm-8 col-sm-offset-2">
+                    	<h3 >RESEAUX SOCIAUX</h3>
+                    	<ul class="list-inline bounce">
+                            <li class="wow bounceIn" data-wow-delay="0.2s">
                                 <a href="https://www.facebook.com/eddy.rahmani.9" class="btn-social btn-outline btn-fb"><i class="fa fa-fw fa-facebook"></i></a>
                             </li>                    
-                            <li>
+                            <li class="wow bounceIn" data-wow-delay="0.3s">
                                 <a href="https://twitter.com/RahmaniEddy" class="btn-social btn-outline btn-tw"><i class="fa fa-fw fa-twitter"></i></a>
                             </li>
-							<li>
+							<li class="wow bounceIn" data-wow-delay="0.4s">
                                 <a href="https://plus.google.com/116088092239152060865/posts" class="btn-social btn-outline btn-gp"><i class="fa fa-fw fa-google-plus"></i></a>
                             </li>
-                            <li>
+                            <li class="wow bounceIn" data-wow-delay="0.5s">
                                 <a href="https://www.linkedin.com/pub/eddy-rahmani/b3/942/114" class="btn-social btn-outline btn-li"><i class="fa fa-fw fa-linkedin"></i></a>
                             </li>
-                            <li>
+                            <li class="wow bounceIn" data-wow-delay="0.6s">
                                 <a href="https://github.com/John-Eddy" class="btn-social btn-outline btn-gh"><i class="fa fa-fw fa-github-alt"></i></a>
                             </li>
                         </ul>
@@ -576,239 +589,11 @@
     </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    <div class="scroll-top page-scroll visible-xs visible-sm">
-        <a class="btn btn-primary" href="#page-top">
-            <i class="fa fa-chevron-up"></i>
-        </a>
-    </div>
-
-    <!-- Portfolio Modals -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cabin.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/cake.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/circus.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/game.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/safe.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
-
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Project Title</h2>
-                            <hr class="star-primary">
-                            <img src="img/portfolio/submarine.png" class="img-responsive img-centered" alt="">
-                            <p>Use this area of the page to describe your project. The icon above is part of a free icon set by <a href="https://sellfy.com/p/8Q9P/jV3VZ/">Flat Icons</a>. On their website, you can download their free set with 16 icons, or you can purchase the entire set with 146 icons for only $12!</p>
-                            <ul class="list-inline item-details">
-                                <li>Client:
-                                    <strong><a href="http://startbootstrap.com">Start Bootstrap</a>
-                                    </strong>
-                                </li>
-                                <li>Date:
-                                    <strong><a href="http://startbootstrap.com">April 2014</a>
-                                    </strong>
-                                </li>
-                                <li>Service:
-                                    <strong><a href="http://startbootstrap.com">Web Development</a>
-                                    </strong>
-                                </li>
-                            </ul>
-                            <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
+    <script src="js/jquery.inview.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -817,28 +602,21 @@
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
 
     <!-- Contact Form JavaScript -->
     <script src="js/jqBootstrapValidation.js"></script>
     <script src="js/contact_me.js"></script>
 
     <!-- Custom Theme JavaScript -->
-
     <script src="js/freelancer.js"></script>
-    <script>
-            function skills(){
-                //Script compétences
-                $(document).ready(function () {
-                    $('.skill-icons').children('.active').each(function(i) {
-                        var row = $(this);
-                        setTimeout(function() {
-                            row.css('background','#c0392b');
-                        }, 100*i);
-                    });
-                });
-            }
+    <script src="js/progressbar.js"></script>
 
-    </script>
+
+
 
 </body>
 

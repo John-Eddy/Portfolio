@@ -5,24 +5,30 @@
  */
 
 body {
-    overflow-x: hidden;
+    background-image:url("../img/background/confectionary.png");
+    background-repeat: repeat;
+
 	width:100%;
 	height:100%;
-    color: #ffffff;
-	/*background-image:url(../img/background/code-background.png);
-	background-repeat: no-repeat;
-	background-attachement: ;*/
+    color: #222222;
+	font-family: Candara, SansSerif;
 }
-.background
-{
-	width:100%;
-	height:100%;
-	position:fixed;
-    z-index: -1
+.background {
+    position: fixed;
+    z-index: -1;
+}
+.bg-grey {
+    background-color: #cccccc;
+}
+.bg {
+    background-color: rgb(22,146,172);
+}
+.bg-dark {
+    background-color: rgb(36,46,64);
 }
 .transparent {
     background: transparent;
-    color: white;
+    color: #000;
 }
 p {
     font-size: 20px;
@@ -32,15 +38,24 @@ p.small {
     font-size: 16px;
 }
 
-#text-left
-{
-    text-align: ;
+.text-white {
+    color:#ffffff;
 }
 
 
-a
+.navbar a
 {
-    color: black;
+    color: #FFFFFF;
+}
+.navbar li a:hover
+ {
+     background-color: transparent;
+     text-shadow: 3px 3px 3px #ffffff;
+ }
+.navbar-shrink li a:hover
+{
+    background-color: #FFFFFF;
+    color: rgb(22,146,172);
 }
 
 
@@ -68,7 +83,6 @@ hr.star-primary {
 
 hr.star-light:after,
 hr.star-primary:after {
-    content: "\f005";
     display: inline-block;
     position: relative;
     top: -.8em;
@@ -79,12 +93,10 @@ hr.star-primary:after {
 
 hr.star-light {
     border-color: #fff;
-	background-color:none;
 }
 
 hr.star-light:after {
     color: #fff;
-    background-color: none;
 }
 
 hr.star-primary {
@@ -92,7 +104,6 @@ hr.star-primary {
 }
 
 hr.star-primary:after {
-    color: #fff;
 	 background-color: none;}
 
 .img-centered {
@@ -101,13 +112,29 @@ hr.star-primary:after {
 
 header {
     text-align: center;
-    color: #fff;
-   /* background: #EFC94C;*/
+    background-image:url("../img/background/background-header.png");
+    background-position: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
 
 }
-
 header .container {
+    margin-top: 100px;
     padding-bottom: 50px;
+}
+header #nom {
+    border: 5px solid #fff;
+    padding: 20px;
+    color:#ffffff;
+}
+header h1{
+    display: block;
+    text-transform: uppercase;
+    font-size: 5em;
+    font-weight: 900;
+}
+header h2 {
+    font-size: 2em;
 }
 
 header img {
@@ -132,7 +159,7 @@ header .intro-text .skills {
 
 @media(min-width:768px) {
     header .container {
-        padding-top: 200px;
+        padding-top: 100px;
         padding-bottom: 100px;
     }
 
@@ -153,6 +180,7 @@ header .intro-text .skills {
         transition: padding .3s;
     }
 
+
     .navbar-fixed-top .navbar-brand {
         font-size: 2em;
         -webkit-transition: all .3s;
@@ -162,7 +190,7 @@ header .intro-text .skills {
 
     .navbar-fixed-top.navbar-shrink {
         padding: 0px 0;
-        box-shadow: 1px 1px 1px grey;
+        box-shadow: 1px 1px 1px #ffffff;
     }
 
     .navbar-fixed-top.navbar-shrink .navbar-brand {
@@ -172,11 +200,11 @@ header .intro-text .skills {
 
 .navbar {
     border: 0;
-    background-color: #fff;
+    background-color: transparent;
     text-transform: uppercase;
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
-    color: black;
+    color: #FFFFFF;
+    border-bottom: 1px solid #fff;
     
 }
 
@@ -194,14 +222,16 @@ header .intro-text .skills {
 
 .navbar-default,
 .navbar-inverse {
-
-
 }
-    
+.navbar-shrink {
+    background-color: rgb(22,146,172);
+    border-bottom: none;
 }
 section {
     color: #ffffff;
 	position:relative;
+    padding-top: 50px;
+    padding-bottom: 10px;
 }
 .solid
 {
@@ -209,22 +239,17 @@ section {
     color: black;
 }
 h1 {
-    display: block;
-    text-transform: uppercase;
-    font-family: Montserrat, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 4em;
-    font-weight: 700;
+
 }
 
-h2 {
-    margin: 0;
+section h2 {
     font-size: 3em;
+    color:rgb(22,146,172);
 }
 .souligne {
-    border-bottom: 3px solid white;
+    border-bottom: 3px solid rgb(22,146,172);
 }
 
-}
 #transparent
 {
     background-color: transparent;
@@ -236,8 +261,7 @@ h2 {
 }
 #veilletechnologique h3
 {
-    border-bottom: 3px solid white;
-
+    border-bottom: 3px solid #222222;
 }
 #veilletechnologique a{
     color: #ce8483;
@@ -252,7 +276,7 @@ section#cv {
 .competence
 {
     list-style-type: none;
-    font-size: px;
+
 }
 
 section#contact {
@@ -262,7 +286,7 @@ section#contact {
 
 section.success a,
 section.success a:hover,
-section.success a:focus,
+section.success a:focus
 
 @media(max-width:767px) {
     section {
@@ -273,9 +297,6 @@ section.success a:focus,
         padding-top: 75px;
     }
 }
-body {
-  background: #333333;
-}
 
 .skills {
   width: 90%;
@@ -283,7 +304,6 @@ body {
 }
 .skills h1 {
   text-align: center;
-  font-family: Verdana;
   color: #cccccc;
   font-weight: 300;
 }
@@ -299,15 +319,20 @@ body {
     width: 100%;
   }
 }
-.skills .skill-column .skill-label {
+.skills .skill-column  {
   font-size: 20px;
   text-align: center;
-  font-family: Verdana;
-  color: #cccccc;
-  display: inline-block;
+  color: #000000;
+}
+.skill-label
+{
+    margin-top: 15px;
+    display: inline-block;
+    float: left;
 }
 .skills .skill-column .skill-icons {
   text-align: center;
+    display: inline-block;
 }
 .skills .skill-column .skill-icons span {
   height: 30px;
@@ -473,18 +498,20 @@ footer .footer-below {
 }
 .btn-telecharger
 {
-	color:#ffffff;
+    background-color:rgb(22,146,172);
+    color:#fff;
 	outline:0;
 }
-.btn-telecharger:hover
+.btn-telecharger:hover, .btn-telecharger:active
 {
 	background-color:#fff;
-	color:black;
+	color:rgb(22,146,172);
+    border-color:rgb(22,146,172);
 	outline:0;
 }
 .btn-envoyer
 {
-    background-color:c0392b;
+    background-color:#c0392b;
 }
 .btn-social {
     display: inline-block;
@@ -587,17 +614,27 @@ footer .footer-below {
     opacity: 0;
 }
 
+div.line
+{
+    display:block;
+    height: 1px;
+    margin: 10px;
+}
 div.bandeau
 {
 	display:block;
-	height:50px;
-	background-color:rgba(255,255,255,0.00);
+	height:75px;
 }
+div.bandeau-medium
+{
+    display: block;
+    height: 50px;
+}
+
 div.bandeau-small
 {
     display:block;
     height:25px;
-    background-color:rgba(255,255,255,0.00);
 }
 
 

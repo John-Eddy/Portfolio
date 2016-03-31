@@ -35,3 +35,27 @@ $('body').scrollspy({
 $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
+
+
+function resize(){
+        var sH = $(window).height();
+        document.getElementById("titre").style.minHeight = sH+'px';
+        $lesSection = document.getElementsByTagName('section');
+
+        for($i=0; $i<$lesSection.length; $i++)
+        {
+            $lesSection[$i].style.minHeight = sH+'px'
+        }
+}
+
+function skills(){
+    //Script compétences
+    $(document).ready(function () {
+        $('.skill-icons').children('.active').each(function(i) {
+            var row = $(this);
+            setTimeout(function() {
+                row.css('background','#1692ac');
+            }, 100*i);
+        });
+    });
+}
