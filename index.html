@@ -18,6 +18,7 @@
     <link href="css/freelancer.css" rel="stylesheet">
     <link href="css/progressbar.css" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
+    <link href="css/test.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -39,7 +40,6 @@
 </head>
 
 <body id="page-top" class="index" onload="resize()">
-	<img  class="background" src="" alt=""/>
 
     <!-- Navigation -->
     <nav class="navbar navbar-default navbar-fixed-top" id="barre-navigation">
@@ -67,8 +67,14 @@
                     <li class="page-scroll">
                         <a href="#presentation">Présentation</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#cv">CV</a>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown"
+                           role="button" aria-haspopup="true" aria-expanded="false">CV<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="page-scroll"><a href="#competence">Compétences</a></li>
+                            <li class="page-scroll"><a href="#langage">Langages</a></li>
+                            <li class="page-scroll"><a href="#formation">Formation</a></li>
+                        </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
@@ -147,198 +153,188 @@
     <!-- CV Section -->
     <section id="cv" class=" transparent">
         <div class="container">
-            <div class="col-lg-12 text-center">
-                <h2 class="souligne">Compétences Proffesionelle</h2>
-            </div>
-            <div class="bandeau-medium col-xs-12"> </div>
-                <div class="col-lg-6 x">
-                    <ul><h3 class="">Développement</h3>
-                        <li><p>Création et gestion de bases de Données MySQL</p></li>
-                        <li>Développement de site web HTML, CSS, PHP</li>
-                        <li>Framework Symphony2, Bootstrap</li>
-                        <li>Développement d’applications Android</li>
-                        <li>Méthodologie Merise, MVC, notions UML</li>
-                    </ul>
+            <div class="row">
+                <!-- COMPETENCES-->
+                <div class="col-lg-12 text-center" id="competence">
+                    <h2 class="souligne">Compétences Proffesionelle</h2>
                 </div>
-                <div class="col-lg-6 text-center">
-                    <!-- Skill Bars -->
-                    <div id="progressbar" class="progress skill-bar ">
-                        <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="70(" aria-valuemin="0" aria-valuemax="70">
-                            <span class="skill">HTML5-CSS3-BOOTSTRAP 3<i class="val">70%</i></span>
-                        </div>
-                    </div>
-
-                    <div class="progress skill-bar">
-                        <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" >
-                            <span class="skill"><i class="val">90%</i></span>
-                        </div>
-                    </div>
-
-                    <div class="progress skill-bar">
-                        <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                            <span class="skill">JavaScript<i class="val">75%</i></span>
-                        </div>
-                    </div>
-
-                    <div class="progress skill-bar">
-                        <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100">
-                            <span class="skill">Photoshop<i class="val">55%</i></span>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bandeau"></div>
-
+                <div class="bandeau-medium col-xs-12"> </div>
                 <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="souligne">Expériences</h2>
+                    <div class="col-lg-4">
+                        <ul><h3 >Développement</h3>
+                            <li><p class="small">Création et gestion de bases de Données MySQL</p></li>
+                            <li><p class="small">Développement de site web HTML, CSS, PHP</p></li>
+                            <li><p class="small">Framework Symphony2, Bootstrap</p></li>
+                            <li><p class="small">Développement d’applications Android</p></li>
+                            <li><p class="small">Méthodologie Merise, MVC, notions UML</p></li>
+                        </ul>
                     </div>
-                    <div class="bandeau col-xs-12"></div>
-
-                    <div>
-                        <div class="col-xs-9">
-                            <p><strong>CONTRÔLE TECHNIQUE LM</strong></p>
-                        </div>
-                        <div class="col-sm-3 text-right">
-                            <p>Janvier 2016</p>
-                        </div>
-                        <div class="col-xs-12">
-                            <p>Stage création d’un site web pour une entreprise de contrôle automobile</p>
-                        </div>
+                    <div class="col-lg-4">
+                        <ul><h3 >Développement</h3>
+                            <li><p class="small">Création et gestion de bases de Données MySQL</p></li>
+                            <li><p class="small">Développement de site web HTML, CSS, PHP</p></li>
+                            <li><p class="small">Framework Symphony2, Bootstrap</p></li>
+                            <li><p class="small">Développement d’applications Android</p></li>
+                            <li><p class="small">Méthodologie Merise, MVC, notions UML</p></li>
+                        </ul>
                     </div>
-
-                    <div class=" col-xs-12 bandeau-small"></div>
-
-
-                    <div>
-                        <div class="col-xs-9">
-                            <p><strong>CASSDALL CHAMPIER</strong></p>
+                    <div class="col-lg-12 text-center" id="langage" >
+                        <div class="row wow bounceIn" data-wow-delay="0.2s">
+                            <h1 >Web Design</h1>
+                            <div class="chart webdesign" data-percent="70" id="webdesign"><img src="img/logo/logo-competences/icon-html5.png" class="logo center"></div>
+                            <div class="chart webdesign" data-percent="60"><img src="img/logo/logo-competences/icon-css3.png"  class="logo center"></div>
+                            <div class="chart webdesign" data-percent="70"><img src="img/logo/logo-competences/icon-b3.png"  class="logo center"></div>
                         </div>
-                        <div class="col-sm-3 text-right">
-                            <p>Juin 2015</p>
+                        <div class="row wow bounceIn" data-wow-delay="0.2s">
+                            <h1>Dévelopement d'application Web</h1>
+                            <div class="chart devweb" data-percent="65"><img src="img/logo/logo-competences/icon-php.png" class="logo center" id="devweb"></div>
+                            <div class="chart devweb" data-percent="55"><img src="img/logo/logo-competences/icon-symfony.png"  class="logo center"></div>
+                            <div class="chart devweb" data-percent="60"><img src="img/logo/logo-competences/icon-mysql.png"  class="logo center"></div>
                         </div>
-                        <div class="col-xs-12">
-                            <p>Stage création d’un site web pour un restaurant</p>
-                        </div>
-                    </div>
-
-                    <div class=" col-xs-12 bandeau-small"></div>
-
-                    <div>
-                        <div class="col-xs-9">
-                            <p><strong>TOTAL</strong></p>
-                        </div>
-                        <div class="col-sm-3 text-right">
-                            <p>Août 2015</p>
-                        </div>
-                        <div class="col-xs-12">
-                            <p>Caisse et mise en rayons dans une station services</p>
-                        </div>
-                    </div>
-
-                    <div class=" col-xs-12 bandeau-small"></div>
-                    <div>
-
-                        <div class="col-xs-9">
-                            <p><strong>FAILARD  INDUSTRIE</strong></p>
-                        </div>
-                        <div class="col-xs-3 text-right">
-                            <p>Juin 2012</p>
-                        </div>
-                        <div  class="col-xs-12">
-                            <p>Stage maintenances, dépannages et fabrications de Radiocommandes Industriels</p>
-                        </div>
-                    </div>
-
-                    <div class=" col-xs-12 bandeau-small"></div>
-
-                    <div>
-                        <div class="col-xs-9">
-                            <p><strong>JEAN-LOUIS MARQUIANT</strong></p>
-                        </div>
-                        <div class="col-xs-3 text-right">
-                            <p>Novembre 2011</p>
-                        </div>
-                        <div class="col-xs-12">
-                            <p> Stage installations d’automatismes sur volets roulants et portails</p>
-                        </div>
-                    </div>
-
-                    <div class=" col-xs-12 bandeau-small"></div>
-
-                    <div>
-                        <div class="col-xs-9">
-                            <p><strong>ELECTRICITE GENERALE G.O.M </strong></p>
-                        </div>
-                        <div class="col-xs-3 text-right">
-                            <p>Juin 2009</p>
-                        </div>
-                        <div class="col-xs-12">
-                            <p>Stage Installations d’équipements électriques
-                            </p>
-                        </div>
-                    </div>
-
-                    <div class=" col-xs-12 bandeau"></div>
-                </div>
-
-                <div class="row">
-                    <div class="col-lg-12 text-center">
-                        <h2 class="souligne">Formation</h2>
-                    </div>
-                    <div class=" bandeau-medium col-xs-12"></div>
-
-                    <div>
-                        <div class="col-xs-9">
-                            <p><strong>SCIENCES-U - LYON</strong></p>
-                        </div>
-                        <div class="col-xs-3 text-right">
-                            <p> 2014 – 2016</p>
-                        </div>
-                        <div class="col-xs-12">
-                            <p>BTS Services Informatiques aux organisations</p>
-                        </div>
-                    </div>
-                    <div class=" col-xs-12 bandeau-small"></div>
-
-                    <div>
-                        <div class="col-xs-9">
-                            <p><strong>LYCEE CHARLES PONCET – CLUSES</strong></p>
-                        </div>
-                        <div class="col-xs-3 text-right">
-                            <p> 2012-2013</p>
-                        </div>
-                        <div class="col-xs-12">
-                            <p>Première année BTS informatiques et réseaux dans l’industrie et les services</p>
-                        </div>
-                    </div>
-                    <div class=" col-xs-12 bandeau-small"></div>
-
-                    <div>
-                        <div class="col-xs-9">
-                            <p><strong> L.P. ALEXANDRE BERARD – AMBERIEU EN BUGEY</strong></p>
-                        </div>
-                        <div class="col-xs-3 text-right">
-                            <p> 2008-2012 </p>
-                        </div>
-                        <div class="col-xs-12">
-                            <p>BAC PRO Systèmes électroniques numériques et BEP Systèmes électroniques industrielles et domestiques</p>
+                        <div class="row wow bounceIn" data-wow-delay="0.2s">
+                            <h1>Dévelopement d'application </h1>
+                            <div class="chart devweb" data-percent="65"><img src="img/logo/logo-competences/icon-java.png" class="logo center" id="dev"></div>
+                            <div class="chart devweb" data-percent="55"><img src="img/logo/logo-competences/icon-c++.png"  class="logo center"></div>
+                            <div class="chart devweb" data-percent="50"><img src="img/logo/logo-competences/icon-python.png"  class="logo center"></div>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <div class="bandeau"></div>
+            <!-- EXPERIENCES-->
+            <div class="row">
+                <div class="col-lg-12 text-center wow  bounceInDown" data-wow-delay="0.2s" >
+                    <h2 class="souligne">Expériences</h2>
+                </div>
+                <div class="bandeau col-xs-12"></div>
+
+                <div class="row">
+                    <div class="col-xs-9 wow fadeInLeft" data-wow-delay="0.4s">
+                        <p><strong>CONTRÔLE TECHNIQUE LM</strong></p>
+                        <p>Stage création d’un site web pour une entreprise de contrôle automobile</p>
+                    </div>
+                    <div class="col-sm-3 text-right wow fadeInRight" data-wow-delay="0.4s">
+                        <p>Janvier 2016</p>
+                    </div>
+                </div>
+                <div class=" col-xs-12 bandeau-small"></div>
+                <div class="row">
+                    <div class="col-xs-9 wow fadeInLeft" data-wow-delay="0.6s">
+                        <p><strong>CASSDALL CHAMPIER</strong></p>
+                        <p>Stage création d’un site web pour un restaurant</p>
+                    </div>
+                    <div class="col-sm-3 text-right wow fadeInRight" data-wow-delay="0.6s">
+                        <p>Juin 2015</p>
+                    </div>
+                </div>
+
+                <div class=" col-xs-12 bandeau-small"></div>
+
+                <div class="row">
+                    <div class="col-xs-9 wow fadeInLeft" data-wow-delay="0.8s">
+                        <p><strong>TOTAL</strong></p>
+                        <p>Caisse et mise en rayons dans une station services</p>
+                    </div>
+                    <div class="col-sm-3 text-right wow fadeInRight" data-wow-delay="0.8s">
+                        <p>Août 2015</p>
+                    </div>
+                </div>
+
+                <div class=" col-xs-12 bandeau-small"></div>
+                <div class="row">
+
+                    <div class="col-xs-9 wow fadeInLeft" data-wow-delay="1s">
+                        <p><strong>FAILARD  INDUSTRIE</strong></p>
+                        <p>Stage maintenances, dépannages et fabrications de Radiocommandes Industriels</p>
+                    </div>
+                    <div class="col-sm-3 text-right wow fadeInRight" data-wow-delay="1s">
+                        <p>Juin 2012</p>
+                    </div>
+                </div>
+
+                <div class=" col-xs-12 bandeau-small"></div>
+
+                <div class="row">
+                    <div class="col-xs-9 wow fadeInLeft" data-wow-delay="1.2s">
+                        <p><strong>JEAN-LOUIS MARQUIANT</strong></p>
+                        <p> Stage installations d’automatismes sur volets roulants et portails</p>
+                    </div>
+                    <div class="col-sm-3 text-right wow fadeInRight" data-wow-delay="1.2s">
+                        <p>Novembre 2011</p>
+                    </div>
+                </div>
+
+                <div class=" col-xs-12 bandeau-small"></div>
+
+                <div class="row">
+                    <div class="col-xs-9 wow fadeInLeft" data-wow-delay="1.4s">
+                        <p><strong>ELECTRICITE GENERALE G.O.M </strong></p>
+                        <p>Stage Installations d’équipements électriques
+                        </p>
+                    </div>
+                    <div class="col-sm-3 text-right wow fadeInRight" data-wow-delay="1.4s">
+                        <p>Juin 2009</p>
+                    </div>
+                </div>
+
+                <div class=" col-xs-12 bandeau"></div>
+            </div>
+
+            <!-- FORMATION -->
+            <div class="row ancre" id="formation">
+                <div class="col-lg-12 text-center wow  bounceInDown" data-wow-delay="0.2s">
+                    <h2 class="souligne">Formation</h2>
+                </div>
+                <div class=" bandeau-medium col-xs-12"></div>
+                <div class="row">
+                    <div class="col-xs-9 wow fadeInLeft" data-wow-delay="0.6s">
+                        <p><strong>SCIENCES-U - LYON</strong></p>
+                        <p>BTS Services Informatiques aux organisations</p>
+                    </div>
+                    <div class="col-sm-3 text-right wow fadeInRight" data-wow-delay="0.6s">
+                        <p> 2014 – 2016</p>
+                    </div>
+                </div>
+                <div class=" col-xs-12 bandeau-small"></div>
+                <div class="row">
+                    <div class="col-xs-9 wow fadeInLeft" data-wow-delay="0.8s">
+                        <p><strong>LYCEE CHARLES PONCET – CLUSES</strong></p>
+                        <p>Première année BTS informatiques et réseaux dans l’industrie et les services</p>
+                    </div>
+                    <div class="col-sm-3 text-right wow fadeInRight" data-wow-delay="0.8s">
+                        <p> 2012-2013</p>
+                    </div>
+                </div>
+                <div class=" col-xs-12 bandeau-small"></div>
+
+                <div class="row">
+                    <div class="col-xs-9 wow fadeInLeft" data-wow-delay="1s">
+                        <p><strong> L.P. ALEXANDRE BERARD – AMBERIEU EN BUGEY</strong></p>
+                        <p>BAC PRO Systèmes électroniques numériques et BEP Systèmes électroniques industrielles et domestiques</p>
+                    </div>
+                    <div class="col-sm-3 text-right wow fadeInRight" data-wow-delay="1s">
+                        <p> 2008-2012 </p>
+                    </div>
+                </div>
+            </div>
+
             <div class="bandeau-medium"></div>
-            <div class="col-lg-8 col-lg-offset-2 text-center">
+            <div class="col-lg-8 col-lg-offset-2 text-center wow bounceInUp" data-wow-delay="1.4s">
                 <a href="CV/CV EDDY RAHMANI.pdf" target="_blank" class="btn btn-lg btn-outline btn-telecharger">
                     <i class="fa fa-download"></i> Telecharger CV
                 </a>
             </div>
         </div>
-        <div class="bandeau-small"></div>
     </section>
 
 
-    <section id="ppe" class="transparent">
+        <div class="bandeau-small"></div>
+        <div class="parallax"  id="borabora-sunset"></div>
+        <!-- PPE -->
+
+
+    <section id="ppe" class="transparent ancre">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -351,7 +347,7 @@
             </div>
         </div>
     </section>
-    <section id="stages" class="transparent">
+    <section id="stages" class="transparent ancre">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -372,11 +368,11 @@
     </section>
 
 	  <!-- veille technologique  Section -->
-    <section class=" transparent">
+    <section class=" transparent ancre" id="veilletechnologique">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2 id="veilletechnologique">Veille Technologique</h2>
+                    <h2>Veille Technologique</h2>
                 </div>
             </div>
             <div class="bandeau-medium"></div>
@@ -485,7 +481,7 @@
         <div class="bandeau-medium"></div>
     </section>
 
-    <section id="veillejuridique" class="transparent">
+    <section id="veillejuridique" class="transparent ancre">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -495,7 +491,7 @@
         </div>
     </section>
     <!-- Contact Section -->
-    <section class="success" id="contact">
+    <section class="success ancre" id="contact">
         <div class="container" id="formulaire">
             <div class="row">
                 <div class="col-lg-12 text-center">
@@ -589,7 +585,7 @@
     </footer>
 
     <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
-    </div>
+    </section>
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
@@ -603,6 +599,13 @@
     <script src="js/classie.js"></script>
     <script src="js/cbpAnimatedHeader.js"></script>
     <script src="js/wow.min.js"></script>
+     <script src="js/test.js"></script>
+    <script src="js/easyPieChart.js"></script>
+    <script src="js/smoothscroll.js"></script>
+    <script src="js/mousescroll.js"></script>
+
+
+
     <script>
         new WOW().init();
     </script>
