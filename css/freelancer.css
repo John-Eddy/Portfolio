@@ -17,16 +17,37 @@ body {
 }
 /***backgroud***/
 body {
-    background-image: url("../img/background/confectionary.png");
-    background-repeat: repeat;
+    /*background-image: url("../img/background/confectionary.png");
+    background-repeat: repeat;*/
 }
 .transparent {
     background: transparent;
     color: #000;
 }
+
 #borabora-sunset{
-    background-image: url("../img/background/bora-bora-sunset.png");
+    background: url("../img/background/bora-plage.jpg") center 0 no-repeat fixed;
     height: 300px;
+}
+#contact{
+    background: url("../img/background/bora_bora_tahiti_sunset.jpg") center 0 no-repeat fixed;
+}
+
+.blur{
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);[/i]
+}
+#form-contact{
+    padding: 50px;
+    border-radius: 10px;
+    background-color: rgba(128,128,128,0.3);
+}
+.form-control{
+    color: #ffffff;
+
 }
 .bg-grey {
     background-color: #cccccc;
@@ -103,11 +124,13 @@ img.logo{
     margin-right: auto;
     margin-left: auto;
 }
+#titre{
+    background:url("../img/background/background-header.jpg") center 0 no-repeat fixed;
 
+}
 header {
 
     text-align: center;
-    background-image:url("../img/background/background-header.jpg");
     background-position: center;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -265,12 +288,7 @@ section {
     color: #ce8483;
 }
 
-section#presentation {
-    background-color:#fff;
-    color: black;
-}
-section#cv {
-}
+
 .competence
 {
     list-style-type: none;

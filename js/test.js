@@ -46,3 +46,13 @@ function animationDevWeb() {
 
 
 }
+
+    $(document).ready(function(){
+        $('#titre').parallax("center", 0, 0.1, true);borabora-sunset
+        presentation
+        $('#presentation').parallax("center", 900, 0.1, true);
+        $('#cv').parallax("center", 900, 0.1, true);
+        $('#borabora-sunset').parallax("center", 900, 0.1, true);
+
+
+    })
