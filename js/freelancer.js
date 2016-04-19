@@ -38,7 +38,10 @@ $('.navbar-collapse ul li a').click(function() {
 
 
 function resize(){
+
         var sH = $(window).height();
         document.getElementById("titre").style.minHeight = sH+'px';
+         document.getElementById("myCarousel").style.minHeight = sH+'px';
+
 
 }

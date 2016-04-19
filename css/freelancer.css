@@ -1,15 +1,10 @@
-/*!
- * Start Bootstrap - Freelancer Bootstrap Theme (http://startbootstrap.com)
- * Code licensed under the Apache License v2.0.
- * For details, see http://www.apache.org/licenses/LICENSE-2.0.
- */
 
 body {
 
-	width:100%;
-	height:100%;
+    width:100%;
+    height:100%;
     color: #222222;
-	font-family: Candara, SansSerif;
+    font-family: Candara, SansSerif;
 }
 /***********colors*******************/
 .text-white {
@@ -20,17 +15,19 @@ body {
     /*background-image: url("../img/background/confectionary.png");
     background-repeat: repeat;*/
 }
+
 .transparent {
     background: transparent;
     color: #000;
 }
 
-#borabora-sunset{
+#borabora-plage{
     background: url("../img/background/bora-plage.jpg") center 0 no-repeat fixed;
     height: 300px;
 }
 #contact{
     background: url("../img/background/bora_bora_tahiti_sunset.jpg") center 0 no-repeat fixed;
+
 }
 
 .blur{
@@ -45,6 +42,8 @@ body {
     border-radius: 10px;
     background-color: rgba(128,128,128,0.3);
 }
+
+
 .form-control{
     color: #ffffff;
 
@@ -80,11 +79,15 @@ p {
 p.small {
     font-size: 16px;
 }
+em
+{
+    color:rgb(22,146,172);
+}
 
 
 hr.star-light,
 hr.star-primary {
-	
+
     margin: 25px auto 30px;
     padding: 0;
     max-width: 250px;
@@ -111,11 +114,11 @@ hr.star-light:after {
     color: #fff;
 }
 hr.star-primary {
-	 background-color: none;
+    background-color: none;
 }
 
 hr.star-primary:after {
-	 background-color: none;}
+    background-color: none;}
 
 .img-centered {
     margin: 0 auto;
@@ -238,7 +241,7 @@ header .intro-text .skills {
     font-weight: 700;
     color: #FFFFFF;
     border-bottom: 1px solid #fff;
-    
+
 }
 
 .navbar a:focus {
@@ -295,10 +298,6 @@ section {
 
 }
 
-section#contact {
-    background-color: white;
-    color: black;
-}
 
 section.success a,
 section.success a:hover,
@@ -315,30 +314,30 @@ section.success a:focus
 }
 
 .skills {
-  width: 90%;
-  margin: 0 auto;
+    width: 90%;
+    margin: 0 auto;
 }
 .skills h1 {
-  text-align: center;
-  color: #cccccc;
-  font-weight: 300;
+    text-align: center;
+    color: #cccccc;
+    font-weight: 300;
 }
 .skills hr {
-  margin: 50px 5%;
+    margin: 50px 5%;
 }
 .skills .skill-column {
-  width: 50%;
-  float: left;
+    width: 50%;
+    float: left;
 }
 @media (max-width: 1000px) {
-  .skills .skill-column {
-    width: 100%;
-  }
+    .skills .skill-column {
+        width: 100%;
+    }
 }
 .skills .skill-column  {
-  font-size: 20px;
-  text-align: center;
-  color: #000000;
+    font-size: 20px;
+    text-align: center;
+    color: #000000;
 }
 .skill-label
 {
@@ -347,17 +346,17 @@ section.success a:focus
     float: left;
 }
 .skills .skill-column .skill-icons {
-  text-align: center;
+    text-align: center;
     display: inline-block;
 }
 .skills .skill-column .skill-icons span {
-  height: 30px;
-  width: 30px;
-  border-radius: 50%;
-  display: inline-block;
-  background: #cccccc;
-  margin: 10px 5px 20px 5px;
-  font-weight: 700;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: inline-block;
+    background: #cccccc;
+    margin: 10px 5px 20px 5px;
+    font-weight: 700;
 }
 
 
@@ -419,14 +418,14 @@ section.success a:focus
 }
 
 .btn-outline {
-	margin-top: 15px;
-	border: solid 2px #fff;
-	font-size: 20px;
-	color: #fff;
-	background: 0 0;
-	transition: all 0.3s ease-in-out 0s;
-	-webkit-transition: all 0.3s ease-in-out 0s;
-	-o-transition: all 0.3s ease-in-out 0s;
+    margin-top: 15px;
+    border: solid 2px #fff;
+    font-size: 20px;
+    color: #fff;
+    background: 0 0;
+    transition: all 0.3s ease-in-out 0s;
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -o-transition: all 0.3s ease-in-out 0s;
 }
 .btn-outline:focus,
 .btn-outline:active,
@@ -516,14 +515,14 @@ footer .footer-below {
 {
     background-color:rgb(22,146,172);
     color:#fff;
-	outline:0;
+    outline:0;
 }
 .btn-telecharger:hover, .btn-telecharger:active
 {
-	background-color:#fff;
-	color:rgb(22,146,172);
+    background-color:#fff;
+    color:rgb(22,146,172);
     border-color:rgb(22,146,172);
-	outline:0;
+    outline:0;
 }
 .btn-envoyer
 {
@@ -638,8 +637,8 @@ div.line
 }
 div.bandeau
 {
-	display:block;
-	height:75px;
+    display:block;
+    height:75px;
 }
 div.bandeau-medium
 {
@@ -654,13 +653,13 @@ div.bandeau-small
 }
 
 
-.btn-fb:hover {background-color: #306199;} 
-.btn-gp:hover {background-color: #e93f2e;} 
-.btn-tw:hover {background-color: #26c4f1;} 
-.btn-li:hover {background-color: #135AC8;} 
-.btn-gh:hover {background-color: #333333;} 
+.btn-fb:hover {background-color: #306199;}
+.btn-gp:hover {background-color: #e93f2e;}
+.btn-tw:hover {background-color: #26c4f1;}
+.btn-li:hover {background-color: #135AC8;}
+.btn-gh:hover {background-color: #333333;}
 
 div .competence
 {
-	background-color:none;
+    background-color:none;
 }
