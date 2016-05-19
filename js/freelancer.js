@@ -43,7 +43,7 @@ function resize(){
         document.getElementById("titre").style.minHeight = sH+'px';
         document.getElementById("carouselAppliweb").style.height = sH+'px';
         document.getElementById("CassdallCarousel").style.height = sH+'px';
-        document.getElementById("controlecarousel").style.height = sH+'px';
+        document.getElementById("ControleCarousel").style.height = sH+'px';
 
 
 
